@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import config from '~/config'
+
+const { github } = config
+</script>
+
 <template>
   <nav mt-6 inline-flex gap-2 text-xl>
     <button icon-btn @click="toggleDark()">
@@ -5,9 +11,10 @@
     </button>
 
     <a
-      i-carbon-logo-github icon-btn
+      i-carbon-logo-github
+      icon-btn
       rel="noreferrer"
-      href="https://github.com/antfu/vitesse-lite"
+      :href="github"
       target="_blank"
       title="GitHub"
     />

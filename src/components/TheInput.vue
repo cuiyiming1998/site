@@ -1,13 +1,25 @@
 <script setup lang="ts">
-const { modelValue } = defineModels<{
-  modelValue: string
+const props = defineProps<{
+  value: any
 }>()
+const emits = defineEmits<{
+  (e: 'update:value', value: any): void
+}>()
+
+const value = computed({
+  get() {
+    return props.value
+  },
+  set(v) {
+    emits('update:value', v)
+  },
+})
 </script>
 
 <template>
   <input
     id="input"
-    v-model="modelValue"
+    v-model="value"
     type="text"
     v-bind="$attrs"
     p="x-4 y-2"
