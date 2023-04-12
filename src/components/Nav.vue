@@ -45,7 +45,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
       </a>
 
       <div f-c-c>
-        <dih-6
+        <div
           w-6
           h-6
           i-carbon-logo-github
