@@ -1,17 +1,60 @@
 <script setup lang="ts">
+import { getAllMarkdowns } from '~/utils/file'
+import type { MarkDown } from '~/utils/file/types.d'
+
+const route = useRoute()
+
+const markdowns = ref<MarkDown[]>([])
+
+onMounted(async () => {
+  markdowns.value = await getAllMarkdowns()
+})
+
+const isRoot = computed(() => {
+  return route.fullPath === '/posts'
+})
 </script>
 
 <template>
   <div
     class="article"
-    flex="~ col"
-    justify-center
-    items-center
-    px-300px
   >
-    <Suspense>
-      <RouterView />
-    </Suspense>
+    <div
+      v-if="isRoot"
+      px-300px
+    >
+      <div
+        v-for="(article, idx) in markdowns"
+        :key="idx"
+        h-o
+        cursor-pointer
+      >
+        <div
+          font-bold
+          text-2xl
+        >
+          {{ article.title }}
+        </div>
+        <div text="gray/80" my-4>
+          {{ article.description }}
+        </div>
+        <div text="gray/60">
+          {{ article.time }}
+        </div>
+      </div>
+    </div>
+
+    <div
+      v-else
+      flex="~ col"
+      justify-center
+      items-center
+      px-300px
+    >
+      <Suspense>
+        <RouterView />
+      </Suspense>
+    </div>
   </div>
 </template>
 

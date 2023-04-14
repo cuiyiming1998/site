@@ -21,6 +21,10 @@ export default defineConfig({
       'flex justify-center items-center',
     ],
     [
+      'h-o',
+      'transition-all opacity-75 hover:opacity-110',
+    ],
+    [
       'text-hover-scale',
       'transition-all cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:transform-scale-120',
     ],
