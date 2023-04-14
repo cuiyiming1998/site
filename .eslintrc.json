@@ -2,5 +2,10 @@
   "extends": "@antfu",
   "rules": {
     "antfu/top-level-function": "off"
-  }
+  },
+  "ignorePatterns": [
+    "*.css",
+    "*.scss",
+    "*.sass"
+  ]
 }

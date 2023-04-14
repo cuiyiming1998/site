@@ -17,7 +17,7 @@ const hrefList: NavItem[] = [
     href: '/',
   },
   {
-    label: 'Resume',
+    label: 'About Me',
     href: 'https://youngs-resume.vercel.app/',
   },
 ]

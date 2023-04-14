@@ -7,7 +7,8 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
-import VueMacros from 'unplugin-vue-macros/vite'
+import VueMacros from 'unplugin-vue-macros'
+import Markdown, { Mode } from 'vite-plugin-markdown'
 
 export default defineConfig({
   resolve: {
@@ -16,7 +17,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    VueMacros({
+    VueMacros.vite({
       plugins: {
         vue: Vue({
           reactivityTransform: true,
@@ -26,6 +27,12 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
+
+    // hhttps://github.com/hmsk/vite-plugin-markdown
+    Markdown({
+      mode: [Mode.VUE, Mode.HTML],
+
+    }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
