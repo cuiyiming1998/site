@@ -9,8 +9,12 @@ interface NavItem {
 }
 const hrefList: NavItem[] = [
   {
-    label: 'Blog',
+    label: 'Home',
     href: '/',
+  },
+  {
+    label: 'Posts',
+    href: '/posts',
   },
   {
     label: 'Projects',

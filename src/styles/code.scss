@@ -1,3 +1,5 @@
+/* https://chinese-colors.heyfe.org/ */
+
 .article {
   .hljs {
     background-color: #0e0e0e;
@@ -8,18 +10,18 @@
     font-size: 1rem;
     line-height: 1.5;
     margin: 0.5rem 0;
-    color: rgb(176, 125, 72);
+    color: #e46828;
     .hljs-keyword {
-      color: rgb(30, 117, 79);
+      color: #497568;
     }
     .hljs-string {
-      color: rgb(181, 105, 89);
+      color: #d6a01d;
     }
     .hljs-title {
-      color: rgb(89, 135, 58);
+      color: #41ae3c;
     }
     .hljs-comment {
-      color: rgb(160, 173, 160);
+      color: #867e76;
     }
   }
 }
