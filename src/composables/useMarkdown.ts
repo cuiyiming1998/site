@@ -11,6 +11,8 @@ export const useMarkdown = async (fileName: string) => {
     })
   })
 
+  const router = useRouter()
+
   try {
     const { html } = await modules[`../markdowns/${fileName}.md`]() as any
 
@@ -21,6 +23,7 @@ export const useMarkdown = async (fileName: string) => {
     return { h }
   }
   catch (e) {
+    router.replace('/404')
     return {
       h: '',
     }
