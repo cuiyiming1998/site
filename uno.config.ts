@@ -34,7 +34,7 @@ export default defineConfig({
     ],
     [
       'p-rs',
-      'px-7 md:pl-30 lg:pl-50 xl:pl-400px',
+      'px-7 md:px-30 lg:px-50 xl:px-400px',
     ],
   ],
   presets: [
