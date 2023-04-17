@@ -27,7 +27,7 @@ const routerLinkTo = (article: MarkDown) => {
   >
     <div
       v-if="isRoot"
-      px-300px
+      px-400px
     >
       <div
         v-for="(article, idx) in markdowns"

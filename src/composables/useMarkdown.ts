@@ -5,7 +5,7 @@ export const useMarkdown = async (fileName: string) => {
 
   onMounted(() => {
     const el = document.querySelector('#article')
-    const blocks = el!.querySelectorAll('pre code')
+    const blocks = el!.querySelectorAll('code')
     blocks.forEach((block: any) => {
       hljs.highlightElement(block)
     })
