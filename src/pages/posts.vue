@@ -27,10 +27,10 @@ const routerLinkTo = (article: MarkDown) => {
   >
     <div
       v-if="isRoot"
-      px-50px
-      sm="px-100px"
-      md="px-200px"
-      lg="px-300px"
+      px-7
+      sm="px-20"
+      md="px-30"
+      lg="px-50"
       xl="px-400px"
     >
       <h1
@@ -51,15 +51,21 @@ const routerLinkTo = (article: MarkDown) => {
       >
         <div
           font-bold
-          text-2xl
+          text="2xl center sm:left"
           mb-2
         >
           {{ article.title }}
         </div>
-        <div v-if="!!article.description" text="gray/80">
+        <div
+          v-if="!!article.description"
+          text="gray/80 center sm:left"
+        >
           {{ article.description }}
         </div>
-        <div text="gray/60" mt-2>
+        <div
+          text="gray/60 center sm:left"
+          mt-2
+        >
           {{ article.time }}
         </div>
       </div>
@@ -70,7 +76,11 @@ const routerLinkTo = (article: MarkDown) => {
       flex="~ col"
       justify-center
       items-center
-      px-300px
+      px-7
+      sm="px-20"
+      md="px-30"
+      lg="px-50"
+      xl="px-400px"
     >
       <Suspense>
         <RouterView />

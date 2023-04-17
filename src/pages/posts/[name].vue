@@ -5,5 +5,5 @@ const { h } = await useMarkdown(props.name)
 </script>
 
 <template>
-  <article id="article" v-html="h" />
+  <article id="article" w-full v-html="h" />
 </template>

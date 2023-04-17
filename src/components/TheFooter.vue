@@ -13,39 +13,37 @@ const showBackLink = computed(() => {
 
 <template>
   <nav
-    pl-50px
-    sm="pl-100px"
-    md="pl-200px"
-    lg="pl-300px"
+    pl-0
+    md="pl-30"
+    lg="pl-50"
     xl="pl-400px"
     mt-6
     flex="~ col"
     gap-2
     text-base
   >
-    <div>
-      <div
-        v-if="showBackLink"
-        mt-8
+    <div
+      v-if="showBackLink"
+      mt-8
+      text="center sm:left"
+    >
+      <span font-mono op50> > </span>
+      <a
+        font-mono
+        op50
+        border="b b-solid b-#7D7D7D/30"
+        transition="300"
+        hover="op80 border-b-#7D7D7D"
+        cursor-pointer
+        @click.prevent="goBack()"
       >
-        <span font-mono op50> > </span>
-        <a
-          font-mono
-          op50
-          border="b b-solid b-#7D7D7D/30"
-          transition="300"
-          hover="op80 border-b-#7D7D7D"
-          cursor-pointer
-          @click.prevent="goBack()"
-        >
-          cd ..
-        </a>
-      </div>
+        cd ..
+      </a>
     </div>
     <div
       mt-8
       mb-4
-      text="sm #555/50 dark:#bbb/50"
+      text="sm #555/50 dark:#bbb/50 center sm:left"
     >
       2023 - PRESENT © Young
     </div>

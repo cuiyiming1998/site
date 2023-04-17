@@ -1,7 +1,9 @@
 <template>
-  <main font-sans text="gray-700 dark:gray-300">
+  <div font-sans text="gray-700 dark:gray-300">
     <Nav />
-    <RouterView />
-    <TheFooter />
-  </main>
+    <main pt-6 pb-10>
+      <RouterView />
+      <TheFooter />
+    </main>
+  </div>
 </template>
