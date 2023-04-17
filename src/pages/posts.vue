@@ -32,7 +32,6 @@ const routerLinkTo = (article: MarkDown) => {
         text-center
         mb-4
         underline
-        cursor-default
       >
         Posts
       </h1>
@@ -66,16 +65,14 @@ const routerLinkTo = (article: MarkDown) => {
       </div>
     </div>
 
-    <div
+    <Suspense
       v-else
       flex="~ col"
       justify-center
       items-center
     >
-      <Suspense>
-        <RouterView />
-      </Suspense>
-    </div>
+      <RouterView />
+    </Suspense>
   </div>
 </template>
 

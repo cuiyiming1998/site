@@ -36,6 +36,10 @@ export default defineConfig({
       'p-rs',
       'px-7 md:px-30 lg:px-50 xl:px-400px',
     ],
+    [
+      'center-rs',
+      'text-center md:text-left',
+    ],
   ],
   presets: [
     presetUno(),
