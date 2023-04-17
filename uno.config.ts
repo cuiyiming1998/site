@@ -22,15 +22,15 @@ export default defineConfig({
     ],
     [
       'h-o',
-      'transition-all opacity-75 hover:opacity-110',
+      'transition-all transition-300 opacity-75 hover:opacity-110',
     ],
     [
       'text-hover-scale',
-      'transition-all cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:transform-scale-120',
+      'transition-all transition-300 cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:transform-scale-120',
     ],
     [
       'text-hover',
-      'transition-all cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200',
+      'transition-all transition-300 cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200',
     ],
   ],
   presets: [

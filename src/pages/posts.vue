@@ -27,25 +27,39 @@ const routerLinkTo = (article: MarkDown) => {
   >
     <div
       v-if="isRoot"
-      px-400px
+      px-50px
+      sm="px-100px"
+      md="px-200px"
+      lg="px-300px"
+      xl="px-400px"
     >
+      <h1
+        text-center
+        mb-4
+        underline
+        cursor-default
+      >
+        Posts
+      </h1>
       <div
         v-for="(article, idx) in markdowns"
         :key="idx"
         h-o
+        m="t-2 b-6"
         cursor-pointer
         @click="routerLinkTo(article)"
       >
         <div
           font-bold
           text-2xl
+          mb-2
         >
           {{ article.title }}
         </div>
-        <div text="gray/80" my-4>
+        <div v-if="!!article.description" text="gray/80">
           {{ article.description }}
         </div>
-        <div text="gray/60">
+        <div text="gray/60" mt-2>
           {{ article.time }}
         </div>
       </div>

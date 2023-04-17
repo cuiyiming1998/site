@@ -41,7 +41,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
         v-for="(i, idx) in hrefList"
         :key="idx"
         class="text-lg text-gray-600 dark:text-gray-400"
-        text-hover-scale
+        text-hover
         :href="i.href"
         @click="(e) => routerLink(i.href, e)"
       >
@@ -54,7 +54,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
           h-6
           i-carbon-logo-github
           f-c-c
-          text-hover-scale
+          text-hover
           @click="routerLink(github)"
         />
       </div>
@@ -66,7 +66,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
           i-carbon-sun
           dark:i-carbon-moon
           dark="h-6 w-6"
-          text-hover-scale
+          text-hover
           @click="toggleDark()"
         />
       </div>
