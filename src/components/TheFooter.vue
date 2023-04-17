@@ -13,10 +13,7 @@ const showBackLink = computed(() => {
 
 <template>
   <nav
-    pl-0
-    md="pl-30"
-    lg="pl-50"
-    xl="pl-400px"
+    p-rs
     mt-6
     flex="~ col"
     gap-2

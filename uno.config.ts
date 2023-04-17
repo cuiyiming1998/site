@@ -32,6 +32,10 @@ export default defineConfig({
       'text-hover',
       'transition-all transition-300 cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200',
     ],
+    [
+      'p-rs',
+      'px-7 md:pl-30 lg:pl-50 xl:pl-400px',
+    ],
   ],
   presets: [
     presetUno(),

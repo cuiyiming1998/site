@@ -27,11 +27,6 @@ const routerLinkTo = (article: MarkDown) => {
   >
     <div
       v-if="isRoot"
-      px-7
-      sm="px-20"
-      md="px-30"
-      lg="px-50"
-      xl="px-400px"
     >
       <h1
         text-center
@@ -76,11 +71,6 @@ const routerLinkTo = (article: MarkDown) => {
       flex="~ col"
       justify-center
       items-center
-      px-7
-      sm="px-20"
-      md="px-30"
-      lg="px-50"
-      xl="px-400px"
     >
       <Suspense>
         <RouterView />
