@@ -4,6 +4,7 @@ export interface MarkDownRaw {
     tags: string[]
     time: string
     description: string[]
+    route: string
   }
   [propName: string]: any
 }

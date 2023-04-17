@@ -3,6 +3,7 @@ import { getAllMarkdowns } from '~/utils/file'
 import type { MarkDown } from '~/utils/file/types.d'
 
 const route = useRoute()
+const router = useRouter()
 
 const markdowns = ref<MarkDown[]>([])
 
@@ -13,6 +14,11 @@ onMounted(async () => {
 const isRoot = computed(() => {
   return route.fullPath === '/posts'
 })
+
+const routerLinkTo = (article: MarkDown) => {
+  const { route } = article
+  router.push(`/posts/${route}`)
+}
 </script>
 
 <template>
@@ -28,6 +34,7 @@ const isRoot = computed(() => {
         :key="idx"
         h-o
         cursor-pointer
+        @click="routerLinkTo(article)"
       >
         <div
           font-bold

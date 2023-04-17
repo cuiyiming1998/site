@@ -1,5 +1,6 @@
 ---
 title: Test
+route: test
 description: Nothing
 time: 2023/04/14
 tags:
@@ -9,7 +10,7 @@ tags:
 
 - 这是一个测试
 
-```js {.c1}
+```js
 import { promises as fs } from 'node:fs'
 import glob from 'fast-glob'
 
