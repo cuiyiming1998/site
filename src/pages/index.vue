@@ -17,7 +17,7 @@ const { name } = config
       {{ name }}
     </h1>
 
-    <div text="lg #555 dark:#bbb">
+    <div text="section lg">
       <p center-rs mb-4>
         A frontend engineer.
       </p>
@@ -39,12 +39,33 @@ const { name } = config
     </div>
 
     <section
-      mt-6
+      mt-10
       font-bold
       font-mono
       text="#d6a01d xl"
     >
       Any application that can be written in JavaScript, will eventually be written in JavaScript.
+    </section>
+
+    <section
+      mt-10
+      text="lg section"
+    >
+      Welcome to my site. I will write some coding articles and my diaries here.
+    </section>
+    <section
+      mt-6
+      text="lg section"
+    >
+      I'm Young, a fanatical coder. Recently living in Beijing. Focusing on frontend.
+    </section>
+    <section
+      mt-6
+      text="lg section"
+    >
+      Outside of programming, in my spare time, I enjoy basketball and video games.
+      I frequently watch NBA and my favorite team is GSW.
+      Hope that we can be good friends!
     </section>
   </div>
 </template>

@@ -33,6 +33,10 @@ export default defineConfig({
       'transition-all transition-300 cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200',
     ],
     [
+      'text-section',
+      'text-#555 dark:text-#bbb',
+    ],
+    [
       'p-rs',
       'px-7 md:px-30 lg:px-50 xl:px-400px',
     ],
