@@ -1,5 +1,10 @@
 /* https://chinese-colors.heyfe.org/ */
 
+html:not(.dark) {
+  .hljs {
+    background-color: #f8f8f8;
+  }
+}
 .article {
   .hljs {
     background-color: #0e0e0e;

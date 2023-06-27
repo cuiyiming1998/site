@@ -28,13 +28,14 @@ const routerLinkTo = (article: MarkDown) => {
     <div
       v-if="isRoot"
     >
-      <h1
+      <div
         text-center
         mb-4
         underline
+        text-10
       >
         Posts
-      </h1>
+      </div>
       <div
         v-for="(article, idx) in markdowns"
         :key="idx"
@@ -88,6 +89,53 @@ html:not(.dark) {
   h1 {
     font-size: 2.3rem;
     font-weight: bold;
+    margin: 2rem 0;
+  }
+  h1::before {
+    content: '#';
+    opacity: .5;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: bold;
+  }
+  h2::before {
+    content: '##';
+    opacity: .5;
+    margin-right: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+  h3::before {
+    content: '###';
+    opacity: .5;
+    margin-right: 1rem;
+  }
+
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 1rem 0 1rem 2rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #005cc5;
+  }
+
+  strong {
+    font-weight: 800;
+    margin: 0 .2rem;
   }
 }
 </style>

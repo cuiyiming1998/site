@@ -2,11 +2,13 @@ import type { App } from 'vue'
 import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
 import typescript from 'highlight.js/lib/languages/typescript'
+import rust from 'highlight.js/lib/languages/rust'
 import css from 'highlight.js/lib/languages/css'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
 import 'highlight.js/styles/github.css'
 
 export const setupHighlight = (app: App) => {
+  hljs.registerLanguage('rust', rust)
   hljs.registerLanguage('javascript', javascript)
   hljs.registerLanguage('js', javascript)
   hljs.registerLanguage('typescript', typescript)

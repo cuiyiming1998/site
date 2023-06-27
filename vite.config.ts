@@ -31,7 +31,6 @@ export default defineConfig({
     // hhttps://github.com/hmsk/vite-plugin-markdown
     Markdown({
       mode: [Mode.VUE, Mode.HTML],
-
     }),
 
     // https://github.com/antfu/unplugin-auto-import
