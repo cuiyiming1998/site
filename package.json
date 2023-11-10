@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
-    "@mdx-js/rollup": "^3.0.0",
     "@vueuse/core": "^9.13.0",
     "highlight.js": "^11.8.0",
     "vue": "^3.3.4",

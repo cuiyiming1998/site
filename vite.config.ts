@@ -9,7 +9,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import VueMacros from 'unplugin-vue-macros'
 import Markdown, { Mode } from 'vite-plugin-markdown'
-import mdx from '@mdx-js/rollup'
 
 export default defineConfig({
   resolve: {
@@ -18,7 +17,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    mdx(),
     VueMacros.vite({
       plugins: {
         vue: Vue({

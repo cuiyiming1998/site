@@ -3,6 +3,7 @@ import { getAllMarkdowns } from '~/utils/file'
 import type { MarkDown } from '~/utils/file/types.d'
 
 const route = useRoute()
+
 const router = useRouter()
 
 const markdowns = ref<MarkDown[]>([])
