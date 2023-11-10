@@ -22,7 +22,7 @@ const hrefList: NavItem[] = [
   },
   {
     label: 'About Me',
-    href: 'https://young-about-me.netlify.app/',
+    href: 'https://about-young.info/',
   },
 ]
 
