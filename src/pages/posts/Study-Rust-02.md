@@ -1,14 +1,11 @@
 ---
-title: 从零学习Rust 02
+title: 从零学习Rust 02 变量和数据交互的方式
 route: Study-Rust-02
 description: Study Rust
-time: 2023/06/27 14:12:00
+date: 2023/06/27 14:12:00
 tags:
   - Rust
 ---
-
-
-# 从零学习Rust 02 变量和数据交互的方式
 
 [视频地址](https://www.bilibili.com/video/BV1hp4y1k7SV?p=16&spm_id_from=pageDriver&vd_source=888e5b3129deb84d49dd800b76a6e557)
 

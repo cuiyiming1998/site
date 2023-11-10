@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
 import App from './App.vue'
 import { setupHighlight } from './utils/highlight'
+import './styles/prose.css'
+import './styles/markdown.css'
 
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'

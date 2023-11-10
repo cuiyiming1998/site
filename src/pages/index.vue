@@ -5,7 +5,8 @@ const { name } = config
 </script>
 
 <template>
-  <div>
+  <div m-auto>
+    <Plum />
     <h1
       text-4xl
       font-900
@@ -17,7 +18,7 @@ const { name } = config
       {{ name }}
     </h1>
 
-    <div text="section lg">
+    <div text="section lg" slide-enter-50>
       <p center-rs mb-4>
         A frontend engineer.
       </p>
@@ -72,6 +73,6 @@ const { name } = config
 
 <style lang="scss" scoped>
 code {
-  font-family: DM Mono,Input Mono,Fira Code, monospace;
+  font-family: 'Fira Code', 'DM Mono', 'Input Mono', monospace;
 }
 </style>

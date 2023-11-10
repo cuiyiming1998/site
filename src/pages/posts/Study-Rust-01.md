@@ -1,14 +1,11 @@
 ---
-title: 从零学习Rust 01
+title: 从零学习Rust 01 所有权
 route: Study-Rust-01
 description: Study Rust
-time: 2023/06/27 10:23:00
+date: 2023/06/27 10:23:00
 tags:
   - Rust
 ---
-
-
-# 从零学习Rust 01 所有权
 
 [视频地址](https://www.bilibili.com/video/BV1hp4y1k7SV?p=16&spm_id_from=pageDriver&vd_source=888e5b3129deb84d49dd800b76a6e557)
 

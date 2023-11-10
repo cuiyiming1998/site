@@ -1,3 +1,5 @@
+import 'vue-router'
+
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
@@ -18,4 +20,10 @@ declare module '*.md' {
 
   // Modify below per your usage
   export { attributes, toc, html, ReactComponent, VueComponent, VueComponentWith };
+}
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    frontmatter: any
+  }
 }

@@ -14,6 +14,7 @@ export const setupHighlight = (app: App) => {
   hljs.registerLanguage('typescript', typescript)
   hljs.registerLanguage('ts', typescript)
   hljs.registerLanguage('css', css)
+  hljs.registerLanguage('bash', javascript)
 
   app.use(hljsVuePlugin)
 }
