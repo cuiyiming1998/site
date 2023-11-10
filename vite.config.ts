@@ -15,9 +15,10 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import { bundledLanguages, getHighlighter } from 'shikiji'
-import { slugify } from './scripts/slugify'
 
-const promises: Promise<any>[] = []
+// @ts-expect-error missing types
+import TOC from 'markdown-it-table-of-contents'
+import { slugify } from './scripts/slugify'
 
 export default defineConfig({
   resolve: {
@@ -98,11 +99,11 @@ export default defineConfig({
           },
         })
 
-        // md.use(TOC, {
-        //   includeLevel: [1, 2, 3, 4],
-        //   slugify,
-        //   containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
-        // })
+        md.use(TOC, {
+          includeLevel: [1, 2, 3, 4],
+          slugify,
+          containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
+        })
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {

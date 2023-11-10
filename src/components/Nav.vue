@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import config from '~/config'
+import { toggleDark } from '~/logics'
 
 const { github } = config
 
@@ -67,7 +68,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
           dark:i-carbon-moon
           dark="h-6 w-6"
           text-hover
-          @click="toggleDark()"
+          @click="toggleDark"
         />
       </div>
     </div>

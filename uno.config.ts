@@ -4,6 +4,8 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
+  transformerDirectives,
+
 } from 'unocss'
 
 export default defineConfig({
@@ -69,5 +71,11 @@ export default defineConfig({
         mono: 'DM Mono',
       },
     }),
+  ],
+  transformers: [
+    transformerDirectives(),
+  ],
+  safelist: [
+    'i-ri-menu-2-fill',
   ],
 })

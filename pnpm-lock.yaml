@@ -43,6 +43,12 @@ devDependencies:
   '@iconify-json/carbon':
     specifier: ^1.1.17
     version: 1.1.17
+  '@iconify/json':
+    specifier: ^2.2.140
+    version: 2.2.140
+  '@types/diacritics':
+    specifier: ^1.3.3
+    version: 1.3.3
   '@types/fs-extra':
     specifier: ^11.0.4
     version: 11.0.4
@@ -609,6 +615,13 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify/json@2.2.140:
+    resolution: {integrity: sha512-pEDLyUe39vZy15C0LT3UrnTzAWq1xkZ+F8+u9XfcHzqC7W9IwsocVMzWBGtXUn+pCmLpksfwHlzVycbbz7eMvw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.1
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
@@ -869,6 +882,10 @@ packages:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
       '@types/ms': 0.7.31
+    dev: true
+
+  /@types/diacritics@1.3.3:
+    resolution: {integrity: sha512-wt0tBItmBsOUVZ8+MCrkBMoVfH/EUZeTXwYSekVVYilZlGDYssREUR+sX72mHvl2IrbdCKgpYARXKh3awD2how==}
     dev: true
 
   /@types/estree@1.0.0:
