@@ -66,7 +66,7 @@ export default defineConfig({
       },
       async markdownItSetup(md) {
         const shiki = await getHighlighter({
-          themes: ['vitesse-dark', 'vitesse-light'],
+          themes: ['vitesse-light', 'vitesse-dark'],
           langs: Object.keys(bundledLanguages) as any,
         })
 
