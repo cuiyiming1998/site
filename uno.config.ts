@@ -8,6 +8,16 @@ import {
 
 } from 'unocss'
 
+import config from './src/config'
+
+const createSafeListIcons = (): string[] => {
+  const { projects } = config
+  const safelistIcons = projects.map(project => project.iconName)
+  return safelistIcons
+}
+const safelistIcons = createSafeListIcons()
+const safelist = [...safelistIcons, 'i-ri-menu-2-fill']
+
 export default defineConfig({
   rules: [
     [/^slide-enter-(\d+)$/, ([_, n]) => ({
@@ -75,7 +85,5 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
   ],
-  safelist: [
-    'i-ri-menu-2-fill',
-  ],
+  safelist,
 })

@@ -23,7 +23,8 @@ const hrefList: NavItem[] = [
   },
   {
     label: 'About Me',
-    href: 'https://about-young.info/',
+    // href: 'https://about-young.info/',
+    href: '/about',
   },
 ]
 
