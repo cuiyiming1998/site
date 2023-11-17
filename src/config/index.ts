@@ -14,7 +14,7 @@ export default {
   // github
   github: 'https://github.com/cuiyiming1998',
   // 头像地址
-  avatar: 'https://avatars.githubusercontent.com/u/25956970?v=4',
+  avatar: 'https://i.postimg.cc/x1dHVHcC/image.png',
   // 岗位
   job: 'Frontend Engineer',
   // 生日
