@@ -13,7 +13,7 @@ const openWindow = (url: string) => {
 
 <template>
   <div
-    bg="transparent hover:#88888808"
+    bg="transparent hover:#88888808 dark:hover:gray-500/30"
     transition
     flex
     x-gap-8

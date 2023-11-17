@@ -12,7 +12,7 @@ const { works } = config
       :key="index"
       flex="~ col"
       p="y-2 x-2 md:x-0"
-      bg="transparent hover:#88888808"
+      bg="transparent hover:#88888808  dark:hover:gray-500/30"
       transition
     >
       <div text-center>
