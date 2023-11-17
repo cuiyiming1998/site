@@ -12,7 +12,7 @@ export default {
   // 手机号
   mobile: '17692390522',
   // github
-  github: 'http://github.com/cuiyiming1998',
+  github: 'https://github.com/cuiyiming1998',
   // 头像地址
   avatar: 'https://avatars.githubusercontent.com/u/25956970?v=4',
   // 岗位
