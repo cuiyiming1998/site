@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { englishOnly, formatDate } from '~/logics'
 import type { Post } from '~/types'
+import { englishOnly, formatDate } from '~/logics'
 
 const router = useRouter()
 const routes: Post[] = router.getRoutes()

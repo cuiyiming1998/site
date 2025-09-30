@@ -20,7 +20,7 @@ export const useMarkdown = async (fileName: string) => {
 
     return { h }
   }
-  catch (e) {
+  catch {
     const router = useRouter()
     router.replace('/404')
     return {

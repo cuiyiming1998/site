@@ -1,23 +1,23 @@
 /// <reference types="vitest" />
 
-import { basename, resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
 import fs from 'fs-extra'
-import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'unplugin-vue-components/vite'
 import matter from 'gray-matter'
-import AutoImport from 'unplugin-auto-import/vite'
-import UnoCSS from 'unocss/vite'
-import VueMacros from 'unplugin-vue-macros'
-import Markdown from 'unplugin-vue-markdown/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
-import { bundledLanguages, getHighlighter } from 'shikiji'
-
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
+import { bundledLanguages, createHighlighter } from 'shiki'
+import UnoCSS from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
+import VueMacros from 'unplugin-vue-macros'
+import Markdown from 'unplugin-vue-markdown/vite'
+import { defineConfig } from 'vite'
+
+import Pages from 'vite-plugin-pages'
 import { slugify } from './scripts/slugify'
 
 export default defineConfig({
@@ -65,7 +65,7 @@ export default defineConfig({
         quotes: '""\'\'',
       },
       async markdownItSetup(md) {
-        const shiki = await getHighlighter({
+        const shiki = await createHighlighter({
           themes: ['vitesse-light', 'vitesse-dark'],
           langs: Object.keys(bundledLanguages) as any,
         })
@@ -107,9 +107,9 @@ export default defineConfig({
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {
-          if (!id.endsWith('.md'))
-            return
-          const route = basename(id, '.md')
+          // if (!id.endsWith('.md'))
+          // return
+          // const _route = basename(id, '.md')
           // if (route === 'index' || frontmatter.image || !frontmatter.title)
           //   return
           // const path = `og/${route}.png`

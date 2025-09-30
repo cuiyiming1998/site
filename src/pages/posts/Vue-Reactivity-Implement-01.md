@@ -81,7 +81,7 @@ describe('effect', () => {
 
 ## 从Proxy看起
 
-背过八股文的我们都知道, 响应式的触发需要通过`收集依赖(track)`, 数据更新后`触发依赖 通知更新(trigger)`, 这一系列的过程都是通过`Proxy`代理对象来实现的.可以说`Proxy`是响应式系统的核心之一.
+背过八股文的都知道, 响应式的触发需要通过`收集依赖(track)`, 数据更新后`触发依赖 通知更新(trigger)`, 这一系列的过程都是通过`Proxy`代理对象来实现的.可以说`Proxy`是响应式系统的核心之一.
 
 > 如果不知道`Proxy`是什么东西的话, 只能说你太Out了🤪, [文档在此](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
 
@@ -107,7 +107,7 @@ export function reactive(target: any) {
 
 沿着`Proxy`的`handler`属性, 我们可以找到`get`和`set`方法, 分别对应着`收集依赖`和`触发依赖`.
 
-这里有个问题, 在数据更新的时候我们`触发依赖`, 如何知道有哪些数据依赖了我们的`reactive`对象呢? 这里我们需要一个数据结构来存储响应式对象和依赖它的对象, 确定他们的依赖关系. 也就`收集依赖`后的存储.
+这里有个问题, 在数据更新的时候我们`触发依赖`, 如何知道有哪些数据依赖了我们的`reactive`对象呢? 这里我们需要一个数据结构来存储响应式对象和依赖它的对象, 确定他们的依赖关系. 也就是`收集依赖`后的存储.
 
 既然是对应关系, 那么使用`WeakMap`来存储是最好的.
 
@@ -116,7 +116,6 @@ export function reactive(target: any) {
 那依赖又是怎样收集的呢? 这就要回到之前的`Proxy`中, 在数据进行`get`操作的时候, 也就是响应式数据被读取的时候, 这个时候就是执行依赖收集的时机.
 
 ```typescript
-
 import { track } from './effect'
 
 export function reactive(target: any) {
@@ -137,7 +136,6 @@ export function reactive(target: any) {
 <div align="center">reactive.ts</div>
 
 ```typescript
-
 export function effect(fn: any) {
 
 }
@@ -145,7 +143,6 @@ export function effect(fn: any) {
 export function track(target: Record<string, any>, key: string) {
 
 }
-
 ```
 
 <div align="center">effect.ts</div>
@@ -155,7 +152,6 @@ export function track(target: Record<string, any>, key: string) {
 由测试代码可知, `effect`在被创建的时候会执行一次, 执行的时候会触发`reactive`的`get`, 也就是收集依赖, 这里我们声明一个`ReactiveEffect`类来方便后面统一存入`deps`中进行维护. 还需要一个`activeEffect`来存储当前正在访问的`effect`
 
 ```typescript
-
 let activeEffect: any
 
 class ReactiveEffect {
@@ -176,7 +172,6 @@ export function effect(fn: any) {
   const _effect = new ReactiveEffect(fn)
   _effect.run()
 }
-
 ```
 
 <div align="center">effect.ts</div>
@@ -186,7 +181,6 @@ export function effect(fn: any) {
 这时已经完成了`effect`调用时的执行, 下面来处理`track`方法. 在`track`时, 根据获取到的`target`和`key`来获取`depsMap`和`deps`, 如果没有则创建, 然后将当前的`effect`加入到`deps`中.
 
 ```typescript
-
 const targetMap = new WeakMap()
 
 export function track(target: Record<string, any>, key: string | symbol) {
@@ -199,7 +193,6 @@ export function track(target: Record<string, any>, key: string | symbol) {
     depsMap.set(key, (deps = new Set()))
   deps.add(activeEffect)
 }
-
 ```
 
 <div align="center">effect.ts</div>
@@ -229,7 +222,6 @@ set(target, key) {
 接下来, 我们在`effect.ts`中去实现`trigger`
 
 ```typescript
-
 export function trigger(target: Record<string, any>, key: string | symbol) {
   // 获取deps
   const depsMap = targetMap.get(target)
@@ -244,7 +236,6 @@ export function trigger(target: Record<string, any>, key: string | symbol) {
   for (const effect of deps)
     effect.run()
 }
-
 ```
 
 ## 完成

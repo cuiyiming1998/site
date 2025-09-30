@@ -1,10 +1,10 @@
 import type { App } from 'vue'
-import hljs from 'highlight.js/lib/core'
-import javascript from 'highlight.js/lib/languages/javascript'
-import typescript from 'highlight.js/lib/languages/typescript'
-import rust from 'highlight.js/lib/languages/rust'
-import css from 'highlight.js/lib/languages/css'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
+import hljs from 'highlight.js/lib/core'
+import css from 'highlight.js/lib/languages/css'
+import javascript from 'highlight.js/lib/languages/javascript'
+import rust from 'highlight.js/lib/languages/rust'
+import typescript from 'highlight.js/lib/languages/typescript'
 import 'highlight.js/styles/github.css'
 
 export const setupHighlight = (app: App) => {
