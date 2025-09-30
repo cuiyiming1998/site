@@ -14,7 +14,7 @@ export default {
   // github
   github: 'https://github.com/cuiyiming1998',
   // 头像地址
-  avatar: 'https://i.postimg.cc/x1dHVHcC/image.png',
+  avatar: 'https://avatars.githubusercontent.com/u/25956970?v=4',
   // 岗位
   job: 'Frontend Engineer',
   // 生日
@@ -24,7 +24,7 @@ export default {
   // 学校
   university: 'Hebei Normal University',
   // 地址
-  address: 'Beijing, China',
+  address: 'Tianjin, China',
   // 技能 string[]
   skills: [
     'JavaScript',

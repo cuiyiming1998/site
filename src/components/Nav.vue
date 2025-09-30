@@ -17,6 +17,10 @@ const hrefList: NavItem[] = [
     label: 'Posts',
     href: '/posts',
   },
+  {
+    label: 'Tags',
+    href: '/tags',
+  },
   // {
   //   label: 'Projects',
   //   href: '/',
@@ -38,7 +42,7 @@ const routerLink = (location: string, e?: MouseEvent) => {
 
 <template>
   <nav p="x-8 y-6" flex justify-end>
-    <div w-80 flex="~" justify-around>
+    <div w-90 flex="~" justify-around>
       <a
         v-for="(i, idx) in hrefList"
         :key="idx"

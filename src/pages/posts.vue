@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Post } from '~/types'
+import * as _ from 'lodash'
 import { englishOnly, formatDate } from '~/logics'
 
 const router = useRouter()
@@ -18,11 +19,10 @@ const routes: Post[] = router.getRoutes()
     place: i.meta.frontmatter.place,
   }))
 
-const posts = computed(() =>
-  routes
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .filter(i => !englishOnly.value || i.lang !== 'zh'),
-)
+const posts = computed(() => {
+  const sortedRoutes = _.cloneDeep(routes).sort((a, b) => +new Date(b.date) - +new Date(a.date))
+  return sortedRoutes.filter(i => !englishOnly.value || i.lang !== 'zh')
+})
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()

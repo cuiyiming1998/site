@@ -1,12 +1,13 @@
 export interface MarkDownRaw {
-  attributes: {
-    title: string
-    tags: string[]
-    time: string
-    description: string[]
-    route: string
-  }
+  title: string
+  tags: string[]
+  date: string
+  description: string
+  route?: string
+  default: Record<string, any>
+  meta: Record<string, any>[]
+  name?: string
   [propName: string]: any
 }
 
-export type MarkDown = MarkDownRaw['attributes']
+export type MarkDown = MarkDownRaw['frontmatter']

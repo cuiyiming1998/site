@@ -58,8 +58,8 @@ export default defineConfig({
         ? ''
         : 'prose m-auto slide-enter-content',
       headEnabled: true,
-      exportFrontmatter: false,
-      exposeFrontmatter: false,
+      exportFrontmatter: true,
+      exposeFrontmatter: true,
       exposeExcerpt: false,
       markdownItOptions: {
         quotes: '""\'\'',

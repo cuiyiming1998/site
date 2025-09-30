@@ -15,7 +15,9 @@ export default antfu(
     // 自定义规则
     rules: {
       'antfu/top-level-function': 'off',
+      'no-console': 'warn',
       'MD025': 'off',
+      'vue/no-v-text-v-html-on-component': 'off',
     },
   },
   {
