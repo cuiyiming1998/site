@@ -4,7 +4,7 @@ export default {
   // 昵称
   nickname: 'Young',
   // 工作经验
-  experience: '三年工作经验',
+  experience: '五年工作经验',
   // 微信号
   wx: 'cymilyily',
   // 邮箱
