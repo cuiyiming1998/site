@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "corepack enable && pnpm install --store=node_modules/.pnpm-store && pnpm run build"
+command = "corepack enable && corepack prepare pnpm@10.17.1 --activate && pnpm install --store=node_modules/.pnpm-store --no-frozen-lockfile && pnpm run build"
 
 [build.environment]
 # 使用 LTS 版本，确保依赖（如 @vue-macros 系列）在 Netlify 上稳定安装

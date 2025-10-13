@@ -105,9 +105,6 @@ importers:
       markdown-it-table-of-contents:
         specifier: ^0.6.0
         version: 0.6.0
-      pnpm:
-        specifier: ^8.15.9
-        version: 8.15.9
       sass:
         specifier: ^1.93.2
         version: 1.93.2
@@ -3317,11 +3314,6 @@ packages:
 
   pnpm-workspace-yaml@1.1.2:
     resolution: {integrity: sha512-XgS7j21a+I0dSmUzDUtKp4TAqPfLwJ0kAg0uQ2dveJxFrY14/9ukaD+Mt+4jt67RH4wgRsvNsjNdKbb/7NrMwQ==}
-
-  pnpm@8.15.9:
-    resolution: {integrity: sha512-SZQ0ydj90aJ5Tr9FUrOyXApjOrzuW7Fee13pDzL0e1E6ypjNXP0AHDHw20VLw4BO3M1XhQHkyik6aBYWa72fgQ==}
-    engines: {node: '>=16.14'}
-    hasBin: true
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -8000,8 +7992,6 @@ snapshots:
   pnpm-workspace-yaml@1.1.2:
     dependencies:
       yaml: 2.8.1
-
-  pnpm@8.15.9: {}
 
   possible-typed-array-names@1.1.0: {}
 
