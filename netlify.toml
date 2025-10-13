@@ -1,10 +1,10 @@
 [build]
 publish = "dist"
-command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+command = "corepack enable && pnpm install --store=node_modules/.pnpm-store && pnpm run build"
 
 [build.environment]
-NPM_FLAGS = "--version"
-NODE_VERSION = "22"
+# 使用 LTS 版本，确保依赖（如 @vue-macros 系列）在 Netlify 上稳定安装
+NODE_VERSION = "20"
 
 [[redirects]]
 from = "/*"
