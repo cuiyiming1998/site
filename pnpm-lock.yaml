@@ -81,9 +81,6 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^4.6.2
         version: 4.6.2(vite@4.5.14(@types/node@18.19.127)(sass@1.93.2))(vue@3.5.22(typescript@4.9.5))
-      '@vue-macros/volar':
-        specifier: ^0.9.8
-        version: 0.9.8(@vue-macros/reactivity-transform@1.1.6(vue@3.5.22(typescript@4.9.5)))(rollup@3.29.5)(vue-tsc@1.8.27(typescript@4.9.5))(vue@3.5.22(typescript@4.9.5))
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.6
@@ -1085,17 +1082,11 @@ packages:
   '@volar/language-core@1.11.1':
     resolution: {integrity: sha512-dOcNn3i9GgZAcJt43wuaEykSluAuOkQgzni1cuxLxTV0nJKanQztp7FxyswdRILaKH+P2XZMPRp2S4MV/pElCw==}
 
-  '@volar/language-core@1.5.4':
-    resolution: {integrity: sha512-l0pmKb/DPPjcD2IUwK3myYuTQW7qLLfXYBHKSGVZ7cnC168V55ecpddTA5a9AYsbCFSWx8neRj5r4JWq93QpZQ==}
-
   '@volar/language-core@2.4.23':
     resolution: {integrity: sha512-hEEd5ET/oSmBC6pi1j6NaNYRWoAiDhINbT8rmwtINugR39loROSlufGdYMF9TaKGfz+ViGs1Idi3mAhnuPcoGQ==}
 
   '@volar/source-map@1.11.1':
     resolution: {integrity: sha512-hJnOnwZ4+WT5iupLRnuzbULZ42L7BWWPMmruzwtLhJfpDVoZLjNBxHDi2sY2bgZXCKlpU5XcsMFoYrsQmPhfZg==}
-
-  '@volar/source-map@1.5.4':
-    resolution: {integrity: sha512-BkvouUYFFLPxof2q6kKAZtyUKRqlS2O/WZKmzTVfPIo5uqqmZTR0+SwN1Xa1qpuezMVUOg61wkqmWP7cY2ezJg==}
 
   '@volar/source-map@2.4.23':
     resolution: {integrity: sha512-Z1Uc8IB57Lm6k7q6KIDu/p+JWtf3xsXJqAX/5r18hYOTpJyBn0KXUR8oTJ4WFYOcDzWC9n3IflGgHowx6U6z9Q==}
@@ -1121,33 +1112,6 @@ packages:
 
   '@vue-macros/common@1.16.1':
     resolution: {integrity: sha512-Pn/AWMTjoMYuquepLZP813BIcq8DTZiNCoaceuNlvaYuOTd8DqBZWc5u0uOMQZMInwME1mdSmmBAcTluiV9Jtg==}
-    engines: {node: '>=16.14.0'}
-    peerDependencies:
-      vue: ^2.7.0 || ^3.2.25
-    peerDependenciesMeta:
-      vue:
-        optional: true
-
-  '@vue-macros/common@1.3.3':
-    resolution: {integrity: sha512-bjHomaf3mu+ARMD4DX22C/lLVVocbmwgcLH7bg1rK4kB5ghesgShZTQIrNR6ZjifQmdGc/2jjZ/25kSb364uEA==}
-    engines: {node: '>=16.14.0'}
-    peerDependencies:
-      vue: ^2.7.0 || ^3.2.25
-    peerDependenciesMeta:
-      vue:
-        optional: true
-
-  '@vue-macros/common@1.7.2':
-    resolution: {integrity: sha512-0/2A4kWLTCNEx+DDQKLvs7zXpfjgAbGBZ58SIvDN1DjGXhG4WaIUZtgMqzA6bvc5dNN7RaOatZYubkVumwmjWA==}
-    engines: {node: '>=16.14.0'}
-    peerDependencies:
-      vue: ^2.7.0 || ^3.2.25
-    peerDependenciesMeta:
-      vue:
-        optional: true
-
-  '@vue-macros/common@1.8.0':
-    resolution: {integrity: sha512-auDJJzE0z3uRe3867e0DsqcseKImktNf5ojCZgUKqiVxb2yTlwlgOVAYCgoep9oITqxkXQymSvFeKhedi8PhaA==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
       vue: ^2.7.0 || ^3.2.25
@@ -1184,13 +1148,6 @@ packages:
     resolution: {integrity: sha512-DpvGrIsjM+BGbtkadJspKq3Y2oa/ryXghx3N/VZ4AvnKDmBFTRBG9epU6NKoKJNTvXq87232qv2PTfrT3S5xQQ==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
-      vue: ^2.7.0 || ^3.2.25
-
-  '@vue-macros/define-props@1.0.21':
-    resolution: {integrity: sha512-x9TnucVhbvnrrZ4vQ/YYBOjrKflB0hujTCKwFMvLE3rSqPrcdd7voo2rx6AnqFgL7khjQQjMtac+4YhTo34HXw==}
-    engines: {node: '>=16.14.0'}
-    peerDependencies:
-      '@vue-macros/reactivity-transform': ^0.3.23
       vue: ^2.7.0 || ^3.2.25
 
   '@vue-macros/define-props@4.0.6':
@@ -1288,10 +1245,6 @@ packages:
     resolution: {integrity: sha512-o1fAnavDmybqBxp5uwqMEBHOLmjdHTdH8nKYNLegZwUGhYpRmLsVdq6dSWkGOGDodwCnqc1I/tfFIFdQPkgcLA==}
     engines: {node: '>=16.14.0'}
 
-  '@vue-macros/short-vmodel@1.2.17':
-    resolution: {integrity: sha512-EjT0md20kYYSOEYdKOHlL5//oZ6G2JfgNfzm/8MmmX++d/w1vlxsFFCojXeaPqaa6i92ciIYxOR34++ovMZRVw==}
-    engines: {node: '>=16.14.0'}
-
   '@vue-macros/short-vmodel@1.5.5':
     resolution: {integrity: sha512-EYEf0f3QU8csOxgBsGiu4tOblOnBKiLFiYaZ3g72ER+6PwJ7kF2fLhHwdA6H/4RL+VEpSOFSTAazpZa4lCed+Q==}
     engines: {node: '>=16.14.0'}
@@ -1301,15 +1254,6 @@ packages:
     engines: {node: '>=16.14.0'}
     peerDependencies:
       vue-tsc: 2.1.10
-    peerDependenciesMeta:
-      vue-tsc:
-        optional: true
-
-  '@vue-macros/volar@0.9.8':
-    resolution: {integrity: sha512-alet6OtYuGtGUZQ/VQOHbkpvp75dSzjip4sD5hFqd3xRJXXroGzhs1O6H9LEj20q6WhLKzdAX0hYG3D4vtLAsQ==}
-    engines: {node: '>=14.19.0'}
-    peerDependencies:
-      vue-tsc: '>=1.6.0'
     peerDependenciesMeta:
       vue-tsc:
         optional: true
@@ -1483,14 +1427,6 @@ packages:
 
   assertion-error@1.1.0:
     resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
-
-  ast-kit@0.10.0:
-    resolution: {integrity: sha512-8y01XClpURgvxTJmM4AY2oHa1B/6iysALB9yJM1j4ak3Z2ZsnU0ewjDZzqOHdbNdit6hC0DGZNrBqNuCrv51fQ==}
-    engines: {node: '>=16.14.0'}
-
-  ast-kit@0.11.3:
-    resolution: {integrity: sha512-qdwwKEhckRk0XE22/xDdmU3v/60E8Edu4qFhgTLIhGGDs/PAJwLw9pQn8Rj99PitlbBZbYpx0k/lbir4kg0SuA==}
-    engines: {node: '>=16.14.0'}
 
   ast-kit@1.4.3:
     resolution: {integrity: sha512-MdJqjpodkS5J149zN0Po+HPshkTdUyrvF7CKTafUgv69vBSPtncrj+3IiUgqdd7ElIEkbeXCsEouBUwLrw9Ilg==}
@@ -2808,14 +2744,6 @@ packages:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
 
-  magic-string-ast@0.1.3:
-    resolution: {integrity: sha512-nnNhBSh8QAd90n3CQeyxKlXY4TKJ4PNjFRi7Ofs1dAr239k6H4CYAaAR4ZKRrWZNBvh1IUTl5dYP91t9dKDjig==}
-    engines: {node: '>=16.14.0'}
-
-  magic-string-ast@0.3.0:
-    resolution: {integrity: sha512-0shqecEPgdFpnI3AP90epXyxZy9g6CRZ+SZ7BcqFwYmtFEnZ1jpevcV5HoyVnlDS9gCnc1UIg3Rsvp3Ci7r8OA==}
-    engines: {node: '>=16.14.0'}
-
   magic-string-ast@0.7.1:
     resolution: {integrity: sha512-ub9iytsEbT7Yw/Pd29mSo/cNQpaEu67zR1VVcXDiYjSFwzeBxNdTd0FMnSslLQXiRj8uGPzwsaoefrMD5XAmdw==}
     engines: {node: '>=16.14.0'}
@@ -3100,9 +3028,6 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-
-  muggle-string@0.2.2:
-    resolution: {integrity: sha512-YVE1mIJ4VpUMqZObFndk9CJu6DBJR/GB13p3tXuNbwD4XExaI5EOuRl6BHeIDxIqXZVxSfAC+y6U1Z/IxCfKUg==}
 
   muggle-string@0.3.1:
     resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==}
@@ -5361,10 +5286,6 @@ snapshots:
     dependencies:
       '@volar/source-map': 1.11.1
 
-  '@volar/language-core@1.5.4':
-    dependencies:
-      '@volar/source-map': 1.5.4
-
   '@volar/language-core@2.4.23':
     dependencies:
       '@volar/source-map': 2.4.23
@@ -5372,10 +5293,6 @@ snapshots:
   '@volar/source-map@1.11.1':
     dependencies:
       muggle-string: 0.3.1
-
-  '@volar/source-map@1.5.4':
-    dependencies:
-      muggle-string: 0.2.2
 
   '@volar/source-map@2.4.23': {}
 
@@ -5424,44 +5341,6 @@ snapshots:
     optionalDependencies:
       vue: 3.5.22(typescript@4.9.5)
 
-  '@vue-macros/common@1.3.3(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@babel/types': 7.28.4
-      '@rollup/pluginutils': 5.3.0(rollup@3.29.5)
-      '@vue/compiler-sfc': 3.5.22
-      local-pkg: 0.4.3
-      magic-string-ast: 0.1.3
-    optionalDependencies:
-      vue: 3.5.22(typescript@4.9.5)
-    transitivePeerDependencies:
-      - rollup
-
-  '@vue-macros/common@1.7.2(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@babel/types': 7.28.4
-      '@rollup/pluginutils': 5.3.0(rollup@3.29.5)
-      '@vue/compiler-sfc': 3.5.22
-      ast-kit: 0.10.0(rollup@3.29.5)
-      local-pkg: 0.4.3
-      magic-string-ast: 0.3.0
-    optionalDependencies:
-      vue: 3.5.22(typescript@4.9.5)
-    transitivePeerDependencies:
-      - rollup
-
-  '@vue-macros/common@1.8.0(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@babel/types': 7.28.4
-      '@rollup/pluginutils': 5.3.0(rollup@3.29.5)
-      '@vue/compiler-sfc': 3.5.22
-      ast-kit: 0.11.3(rollup@3.29.5)
-      local-pkg: 0.4.3
-      magic-string-ast: 0.3.0
-    optionalDependencies:
-      vue: 3.5.22(typescript@4.9.5)
-    transitivePeerDependencies:
-      - rollup
-
   '@vue-macros/config@0.6.1(vue@3.5.22(typescript@4.9.5))':
     dependencies:
       '@vue-macros/common': 1.16.1(vue@3.5.22(typescript@4.9.5))
@@ -5498,15 +5377,6 @@ snapshots:
       '@vue-macros/common': 1.16.1(vue@3.5.22(typescript@4.9.5))
       unplugin: 1.16.1
       vue: 3.5.22(typescript@4.9.5)
-
-  '@vue-macros/define-props@1.0.21(@vue-macros/reactivity-transform@1.1.6(vue@3.5.22(typescript@4.9.5)))(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@vue-macros/common': 1.8.0(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))
-      '@vue-macros/reactivity-transform': 1.1.6(vue@3.5.22(typescript@4.9.5))
-      unplugin: 1.16.1
-      vue: 3.5.22(typescript@4.9.5)
-    transitivePeerDependencies:
-      - rollup
 
   '@vue-macros/define-props@4.0.6(@vue-macros/reactivity-transform@1.1.6(vue@3.5.22(typescript@4.9.5)))(vue@3.5.22(typescript@4.9.5))':
     dependencies:
@@ -5639,14 +5509,6 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@vue-macros/short-vmodel@1.2.17(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@vue-macros/common': 1.7.2(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))
-      '@vue/compiler-core': 3.5.22
-    transitivePeerDependencies:
-      - rollup
-      - vue
-
   '@vue-macros/short-vmodel@1.5.5(vue@3.5.22(typescript@4.9.5))':
     dependencies:
       '@vue-macros/common': 1.16.1(vue@3.5.22(typescript@4.9.5))
@@ -5668,20 +5530,6 @@ snapshots:
       vue-tsc: 1.8.27(typescript@4.9.5)
     transitivePeerDependencies:
       - typescript
-      - vue
-
-  '@vue-macros/volar@0.9.8(@vue-macros/reactivity-transform@1.1.6(vue@3.5.22(typescript@4.9.5)))(rollup@3.29.5)(vue-tsc@1.8.27(typescript@4.9.5))(vue@3.5.22(typescript@4.9.5))':
-    dependencies:
-      '@volar/language-core': 1.5.4
-      '@vue-macros/common': 1.3.3(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))
-      '@vue-macros/define-props': 1.0.21(@vue-macros/reactivity-transform@1.1.6(vue@3.5.22(typescript@4.9.5)))(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))
-      '@vue-macros/short-vmodel': 1.2.17(rollup@3.29.5)(vue@3.5.22(typescript@4.9.5))
-      muggle-string: 0.2.2
-    optionalDependencies:
-      vue-tsc: 1.8.27(typescript@4.9.5)
-    transitivePeerDependencies:
-      - '@vue-macros/reactivity-transform'
-      - rollup
       - vue
 
   '@vue/compiler-core@3.5.22':
@@ -5887,22 +5735,6 @@ snapshots:
   array-union@2.1.0: {}
 
   assertion-error@1.1.0: {}
-
-  ast-kit@0.10.0(rollup@3.29.5):
-    dependencies:
-      '@babel/parser': 7.28.4
-      '@rollup/pluginutils': 5.3.0(rollup@3.29.5)
-      pathe: 1.1.2
-    transitivePeerDependencies:
-      - rollup
-
-  ast-kit@0.11.3(rollup@3.29.5):
-    dependencies:
-      '@babel/parser': 7.28.4
-      '@rollup/pluginutils': 5.3.0(rollup@3.29.5)
-      pathe: 1.1.2
-    transitivePeerDependencies:
-      - rollup
 
   ast-kit@1.4.3:
     dependencies:
@@ -7349,14 +7181,6 @@ snapshots:
 
   lru-cache@7.18.3: {}
 
-  magic-string-ast@0.1.3:
-    dependencies:
-      magic-string: 0.30.19
-
-  magic-string-ast@0.3.0:
-    dependencies:
-      magic-string: 0.30.19
-
   magic-string-ast@0.7.1:
     dependencies:
       magic-string: 0.30.19
@@ -7849,8 +7673,6 @@ snapshots:
   ms@2.1.2: {}
 
   ms@2.1.3: {}
-
-  muggle-string@0.2.2: {}
 
   muggle-string@0.3.1: {}
 
