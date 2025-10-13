@@ -6,6 +6,7 @@ tags:
   - Vue
 ---
 
+
 [[toc]]
 
 在面试中, 我们经常会被问到: `小伙子, Vue3的响应式系统是如何实现的?`. 大部分人都会回答`Object.defineProperty / Proxy + 发布订阅者模式`.
