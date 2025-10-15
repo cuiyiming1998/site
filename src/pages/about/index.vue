@@ -1,4 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
+import { isDark } from '~/logics'
+
 defineOptions({
   name: 'AboutPage',
 })
@@ -6,7 +8,8 @@ defineOptions({
 
 <template>
   <div>
-    <Plum />
+    <Galaxy v-if="isDark" />
+    <Plum v-else />
     <div w="full">
       <Profile />
     </div>

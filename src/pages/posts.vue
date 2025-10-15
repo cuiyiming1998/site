@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Post } from '~/types'
 import * as _ from 'lodash'
-import { englishOnly, formatDate } from '~/logics'
+import { englishOnly, formatDate, isDark } from '~/logics'
 
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
@@ -45,7 +45,8 @@ const isRoot = computed(() => {
 <template>
   <div>
     <ul v-if="isRoot">
-      <Plum />
+      <Galaxy v-if="isDark" />
+      <Plum v-else />
       <template v-if="!posts.length">
         <div py2 op50>
           { nothing here yet }

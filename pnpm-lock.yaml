@@ -32,6 +32,9 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+      ogl:
+        specifier: ^1.0.11
+        version: 1.0.11
       pinia:
         specifier: ^2.3.1
         version: 2.3.1(typescript@4.9.5)(vue@3.5.22(typescript@4.9.5))
@@ -3213,6 +3216,9 @@ packages:
 
   ofetch@1.4.1:
     resolution: {integrity: sha512-QZj2DfGplQAr2oj9KzceK9Hwz6Whxazmn85yYeVuS3u9XTMOGMRx0kO95MQ+vLsj/S/NwBDMMLU5hpxvI6Tklw==}
+
+  ogl@1.0.11:
+    resolution: {integrity: sha512-kUpC154AFfxi16pmZUK4jk3J+8zxwTWGPo03EoYA8QPbzikHoaC82n6pNTbd+oEaJonaE8aPWBlX7ad9zrqLsA==}
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -7936,6 +7942,8 @@ snapshots:
       destr: 2.0.5
       node-fetch-native: 1.6.7
       ufo: 1.6.1
+
+  ogl@1.0.11: {}
 
   once@1.4.0:
     dependencies:

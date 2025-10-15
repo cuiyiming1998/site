@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import config from '~/config'
+import { isDark } from '~/logics'
 
 const { name } = config
 </script>
 
 <template>
   <div m-auto>
-    <Plum />
+    <Galaxy
+      v-if="isDark"
+      :mouse-repulsion="false"
+      :mouse-interaction="false"
+    />
+    <Plum v-else />
     <h1
       text-4xl
       font-900
@@ -49,6 +55,7 @@ const { name } = config
         :typing-speed="75"
         :pause-duration="1500"
         :show-cursor="true"
+        cursor-character="|"
       />
     </section>
 

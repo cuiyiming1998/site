@@ -1,6 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import type { MarkDown } from '../../utils/file/types.d'
-import { formatDate } from '~/logics'
+import { formatDate, isDark } from '~/logics'
 import { getAllMarkdowns, getAllTags } from '../../utils/file'
 
 defineOptions({
@@ -48,7 +48,8 @@ const isTagExpanded = (tag: string) => {
 
 <template>
   <div>
-    <Plum />
+    <Galaxy v-if="isDark" />
+    <Plum v-else />
     <ul v-if="tags.length">
       <div
         select-none relative h20 pointer-events-none slide-enter

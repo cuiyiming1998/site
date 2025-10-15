@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Avatar: typeof import('./src/components/Avatar.vue')['default']
     Contact: typeof import('./src/components/Contact.vue')['default']
+    Galaxy: typeof import('./src/components/Galaxy.vue')['default']
     Nav: typeof import('./src/components/Nav.vue')['default']
     Plum: typeof import('./src/components/Plum.vue')['default']
     Profile: typeof import('./src/components/Profile.vue')['default']
