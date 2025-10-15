@@ -15,7 +15,7 @@ const { name } = config
       underline
       cursor-default
     >
-      {{ name }}
+      <ShinyText :text="name" :disabled="false" :speed="1" />
     </h1>
 
     <div text="section lg" slide-enter-50>
@@ -41,11 +41,15 @@ const { name } = config
 
     <section
       mt-10
-      font-bold
-      font-mono
-      text="#d6a01d xl"
     >
-      Any application that can be written in JavaScript, will eventually be written in JavaScript.
+      <TextType
+        text="Any application that can be written in JavaScript, will eventually be written in JavaScript."
+        class-name="text-xl font-bold font-mono"
+        :text-colors="[' #d6a01d']"
+        :typing-speed="75"
+        :pause-duration="1500"
+        :show-cursor="true"
+      />
     </section>
 
     <section
