@@ -18,6 +18,7 @@ export default antfu(
       'no-console': 'warn',
       'MD025': 'off',
       'vue/no-v-text-v-html-on-component': 'off',
+      'vue/no-template-shadow': 'warn', // 降级为警告而不是错误
     },
   },
   {

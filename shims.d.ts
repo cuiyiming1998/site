@@ -3,7 +3,7 @@ import 'vue-router'
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
 
-  const component: DefineComponent<{}, {}, any>
+  const component: DefineComponent<object, object, any>
   export default component
 }
 
@@ -19,6 +19,8 @@ declare module '*.md' {
 
   const VueComponent: ComponentOptions
   const VueComponentWith: (components: Record<string, Component>) => ComponentOptions
+  const ReactComponent: any
+  const toc: any
 
   // Modify below per your usage
   export { attributes, html, ReactComponent, toc, VueComponent, VueComponentWith }
