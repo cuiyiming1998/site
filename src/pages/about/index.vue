@@ -16,7 +16,7 @@ defineOptions({
     <div w="full" flex="~ col justify-center">
       <Skills />
       <Projects />
-      <Works />
+      <!-- <Works /> -->
     </div>
   </div>
 </template>

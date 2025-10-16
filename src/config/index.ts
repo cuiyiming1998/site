@@ -8,7 +8,7 @@ export default {
   // 微信号
   wx: 'cymilyily',
   // 邮箱
-  email: 'atlasyoung@163.com',
+  email: 'atlasyoungcym@163.com',
   // 手机号
   mobile: '17692390522',
   // github
