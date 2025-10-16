@@ -17,7 +17,9 @@ const routes: Post[] = router.getRoutes()
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
     place: i.meta.frontmatter.place,
+    ...i.meta.frontmatter,
   }))
+console.log(routes)
 
 const posts = computed(() => {
   const sortedRoutes = _.cloneDeep(routes).sort((a, b) => +new Date(b.date) - +new Date(a.date))
@@ -84,8 +86,8 @@ const isRoot = computed(() => {
             "
             class="item block font-normal mb-6 mt-2 no-underline"
           >
-            <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
-              <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
+            <li class="no-underline" flex="~ col md:row gap-2 md:items-end">
+              <div class="title text-xl leading-1.2em" flex="~ gap-2 wrap">
                 <span
                   v-if="route.lang === 'zh'"
                   align-middle flex-none
@@ -94,7 +96,7 @@ const isRoot = computed(() => {
                 <span align-middle>{{ route.title }}</span>
               </div>
 
-              <div flex="~ gap-2 items-center">
+              <div flex="~ gap-2">
                 <span
                   v-if="route.redirect"
                   align-middle op50 flex-none text-xs ml--1 mt--1
@@ -126,6 +128,7 @@ const isRoot = computed(() => {
                 <span v-if="route.duration" text-sm op40 ws-nowrap>· {{ route.duration }}</span>
                 <span v-if="route.platform" text-sm op40 ws-nowrap>· {{ route.platform }}</span>
                 <span v-if="route.place" text-sm op40 ws-nowrap md:hidden>· {{ route.place }}</span>
+                <span v-for="(tag, index) in route.tags" :key="index" text-sm op40 ws-nowrap>· {{ tag }}</span>
                 <span
                   v-if="route.lang === 'english'"
                   align-middle flex-none
@@ -133,7 +136,7 @@ const isRoot = computed(() => {
                 >English</span>
               </div>
             </li>
-            <div v-if="route.place" op50 text-sm hidden mt--2 md:block>
+            <div v-if="route.place" op50 text-sm hidden mt-2 md:block>
               {{ route.place }}
             </div>
           </component>
