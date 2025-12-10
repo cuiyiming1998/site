@@ -26,6 +26,11 @@ export default defineConfig({
       '~/': `${resolve(__dirname, 'src')}/`,
     },
   },
+  server: {
+    hmr: {
+      overlay: false
+    }
+  },
   plugins: [
     VueMacros.vite({
       plugins: {
@@ -99,11 +104,24 @@ export default defineConfig({
           },
         })
 
-        md.use(TOC, {
+        // 使用 markdown-it-table-of-contents 插件，并修改 markerPattern
+    md.use(TOC, {
           includeLevel: [1, 2, 3, 4],
           slugify,
-          containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
+          containerHeaderHtml: '',
+          containerClass: 'table-of-contents',
+          listType: 'ul',
+          markerPattern: /^<!--\s*toc\s*-->$/im,
         })
+
+        // 重写渲染规则，将 div 改为 nav
+        md.renderer.rules.toc_open = function () {
+          return `<nav class="table-of-contents">`
+        }
+
+        md.renderer.rules.toc_close = function () {
+          return '</nav>'
+        }
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {
