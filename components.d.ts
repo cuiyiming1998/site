@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     ShinyText: typeof import('./src/components/ShinyText.vue')['default']
     Skills: typeof import('./src/components/Skills.vue')['default']
+    Test: typeof import('./src/components/Test.vue')['default']
     TextType: typeof import('./src/components/TextType.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     Title: typeof import('./src/components/Title.vue')['default']

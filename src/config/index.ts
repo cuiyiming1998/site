@@ -43,6 +43,12 @@ export default {
   // pnpm i -D @iconify-json/xxx
   projects: [
     {
+      name: 'emoticons-crop',
+      description: 'Crop AI-generated emoticons',
+      iconName: 'i-ion-scissors',
+      url: 'https://emoticons-crop.netlify.app',
+    },
+    {
       name: 'Vue3-mini',
       description: 'Minimum implementation of Vue3 source code.',
       iconName: 'i-carbon-logo-vue',
